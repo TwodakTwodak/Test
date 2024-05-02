@@ -25,7 +25,7 @@ void Splash::Load() {
 void Splash::Update([[maybe_unused]] double dt) {
     Engine::GetLogger().LogDebug(std::to_string(counter));
     if (counter >= 2) {
-        Engine::GetGameStateManager().SetNextGameState(static_cast<int>(States::Main_menu));
+        Engine::GetGameStateManager().ClearNextGameState();
     }
     counter+=dt;
 }

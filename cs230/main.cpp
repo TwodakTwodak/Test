@@ -12,9 +12,6 @@ Created:    March 8, 2023
 
 #include "Engine/Engine.h"
 #include "Game/Splash.h"
-#include "Game/Main_menu.h"
-#include "Game/Mode1.h"
-#include "Game/Mode2.h"
 
 int main() {
     try {
@@ -26,13 +23,6 @@ int main() {
 
         Splash splash;
         engine.GetGameStateManager().AddGameState(splash);
-        Main_menu main_menu;
-        engine.GetGameStateManager().AddGameState(main_menu);
-        Mode1 mode1;
-        engine.GetGameStateManager().AddGameState(mode1);
-        Mode2 mode2;
-        engine.GetGameStateManager().AddGameState(mode2);
-
 
         while (engine.HasGameEnded() == false) {
             engine.Update();

@@ -15,8 +15,9 @@ Created:    March 8, 2023
 enum class States {
     Splash,
     Main_menu,
-    Mode1,
-    Mode2
+    SideView,
+    TopView,
+    GameEditor
 };
     
 #endif
