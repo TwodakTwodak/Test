@@ -8,9 +8,7 @@ Author:     Jonathan Holmes
 Created:    March 8, 2023
 */
 
-#ifndef MATRIX
-#define MATRIX
-
+#pragma once
 #include "Vec2.h"
 
 namespace Math {
@@ -19,32 +17,30 @@ namespace Math {
         TransformationMatrix();
 
         const double* operator[](int index) const { return matrix[index]; }
-        TransformationMatrix operator * (TransformationMatrix m) const;
-        TransformationMatrix& operator *= (TransformationMatrix m);
-        vec2 operator*(vec2 v) const;
+        TransformationMatrix operator * (const TransformationMatrix& m) const;
+        TransformationMatrix& operator *= (const TransformationMatrix& m);
+        Math::vec3 operator*(const vec3& v) const;
         void Reset();
     protected:
-        double matrix[3][3];
+        double matrix[4][4];
     };
 
     class TranslationMatrix : public TransformationMatrix {
     public:
-        TranslationMatrix(ivec2 translate);
-        TranslationMatrix(vec2 translate);
+        TranslationMatrix(const Math::vec3& translation);
+        TranslationMatrix(const Math::ivec3& translation);
     };
 
     class ScaleMatrix : public TransformationMatrix {
     public:
         ScaleMatrix(double scale);
-        ScaleMatrix(vec2 scale);
+        ScaleMatrix(vec3 scale);
     };
-
 
     class RotationMatrix : public TransformationMatrix {
     public:
         RotationMatrix(double theta);
     };
-
 }
 
-#endif
+

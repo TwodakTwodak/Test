@@ -39,7 +39,7 @@ bool CS230::Window::IsClosed() const {
     return WindowShouldClose();
 }
 
-Math::ivec2 CS230::Window::GetSize() const {
+Math::ivec3 CS230::Window::GetSize() const {
     return size;
 }
 //Again what's the meaning of this isn't it okay use this at upadte part?

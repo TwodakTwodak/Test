@@ -17,17 +17,17 @@ namespace CS230 {
     class GameObject {
     public:
         GameObject();
-        GameObject(Math::vec2 position);
-        GameObject(Math::vec2 position, double rotation, Math::vec2 scale);
+        GameObject(Math::vec3 position);
+        GameObject(Math::vec3 position, double rotation, Math::vec3 scale);
         virtual ~GameObject() {}
 
         virtual void Update(double dt);
         virtual void Draw(Math::TransformationMatrix camera_matrix);
 
         const Math::TransformationMatrix& GetMatrix();
-        const Math::vec2& GetPosition() const;
-        const Math::vec2& GetVelocity() const;
-        const Math::vec2& GetScale() const;
+        const Math::vec3& GetPosition() const;
+        const Math::vec3& GetVelocity() const;
+        const Math::vec3& GetScale() const;
         double GetRotation() const;
 
     protected:
@@ -68,8 +68,8 @@ namespace CS230 {
         bool matrix_outdated = false;
 
         double rotation;
-        Math::vec2 scale;
-        Math::vec2 position;
-        Math::vec2 velocity;
+        Math::vec3 scale;
+        Math::vec3 position;
+        Math::vec3 velocity;
     };
 }

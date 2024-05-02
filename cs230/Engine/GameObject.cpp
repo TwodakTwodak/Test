@@ -15,11 +15,11 @@ CS230::GameObject::GameObject() :
 {
 }
 
-CS230::GameObject::GameObject(Math::vec2 position) :
+CS230::GameObject::GameObject(Math::vec3 position) :
     GameObject(position, 0, { 1, 1 })
 {}
 
-CS230::GameObject::GameObject(Math::vec2 position, double rotation, Math::vec2 scale) :
+CS230::GameObject::GameObject(Math::vec3 position, double rotation, Math::vec3 scale) :
     velocity({ 0,0 }),
     position(position),
     scale(scale),
@@ -53,17 +53,17 @@ const Math::TransformationMatrix& CS230::GameObject::GetMatrix() {
     return object_matrix;
 }
 
-const Math::vec2& CS230::GameObject::GetPosition() const
+const Math::vec3& CS230::GameObject::GetPosition() const
 {
     return position;
 }
 
-const Math::vec2& CS230::GameObject::GetVelocity() const
+const Math::vec3& CS230::GameObject::GetVelocity() const
 {
     return velocity;
 }
 
-const Math::vec2& CS230::GameObject::GetScale() const
+const Math::vec3& CS230::GameObject::GetScale() const
 {
     return scale;
 }
@@ -73,35 +73,35 @@ double CS230::GameObject::GetRotation() const
     return rotation;
 }
 
-void CS230::GameObject::SetPosition(Math::vec2 new_position) {
+void CS230::GameObject::SetPosition(Math::vec3 new_position) {
     matrix_outdated = false;
     position = new_position;
 }
 
-void CS230::GameObject::UpdatePosition(Math::vec2 delta) {
+void CS230::GameObject::UpdatePosition(Math::vec3 delta) {
     matrix_outdated = false;
     position += delta;
 }
 
-void CS230::GameObject::SetVelocity(Math::vec2 new_velocity)
+void CS230::GameObject::SetVelocity(Math::vec3 new_velocity)
 {
     matrix_outdated = false;
     velocity = new_velocity;
 }
 
-void CS230::GameObject::UpdateVelocity(Math::vec2 delta)
+void CS230::GameObject::UpdateVelocity(Math::vec3 delta)
 {
     matrix_outdated = false;
     velocity += delta;
 }
 
-void CS230::GameObject::SetScale(Math::vec2 new_scale)
+void CS230::GameObject::SetScale(Math::vec3 new_scale)
 {
     matrix_outdated = false;
     scale = new_scale;
 }
 
-void CS230::GameObject::UpdateScale(Math::vec2 delta)
+void CS230::GameObject::UpdateScale(Math::vec3 delta)
 {
     matrix_outdated = false;
     scale += delta;

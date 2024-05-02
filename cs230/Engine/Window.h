@@ -22,11 +22,11 @@ namespace CS230 {
         void Start(std::string title);
         void Update();
         bool IsClosed() const;
-        Math::ivec2 GetSize() const;
+        Math::ivec3 GetSize() const;
         void Clear(unsigned int color);
 
     private:
-        Math::ivec2 size;
+        Math::ivec3 size;
         //It is a problem of sequence of main code it update after calling window! 
         //So i should use deligate?
         //But this window class do not have any constructor!

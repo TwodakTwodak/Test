@@ -18,14 +18,14 @@ namespace CS230 {
     class Camera {
     public:
         Camera(Math::rect player_zone);
-        void SetPosition(Math::vec2 new_position);
-        const Math::vec2& GetPosition() const;
+        void SetPosition(Math::vec3 new_position);
+        const Math::vec3& GetPosition() const;
         void SetLimit(Math::irect new_limit);
-        void Update(const Math::vec2& player_position);
+        void Update(const Math::vec3& player_position);
         Math::TransformationMatrix GetMatrix();
     private:
         Math::irect limit;
-        Math::vec2 position;
+        Math::vec3 position;
         Math::rect player_zone;
     };
 }

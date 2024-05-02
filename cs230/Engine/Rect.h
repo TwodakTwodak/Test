@@ -14,10 +14,10 @@ Created:    March 8, 2023
 
 namespace Math {
     struct [[nodiscard]] rect {
-        Math::vec2 bottom_left{ 0.0, 0.0 };
-        Math::vec2 top_right{ 0.0, 0.0 };
+        Math::vec3 bottom_left{ 0.0, 0.0 };
+        Math::vec3 top_right{ 0.0, 0.0 };
 
-        vec2 Size() const noexcept {
+        vec3 Size() const noexcept {
             return {
                 top_right.x - bottom_left.x,
                 std::abs(top_right.y - bottom_left.y)
@@ -25,10 +25,10 @@ namespace Math {
         }
     };
     struct [[nodiscard]] irect {
-        Math::ivec2 bottom_left{ 0, 0 };
-        Math::ivec2 top_right{ 0, 0 };
+        Math::ivec3 bottom_left{ 0, 0 };
+        Math::ivec3 top_right{ 0, 0 };
 
-        ivec2 Size() const noexcept {
+        ivec3 Size() const noexcept {
             return {
                 top_right.x - bottom_left.x,
                 std::abs(top_right.y - bottom_left.y)

@@ -25,11 +25,11 @@ namespace CS230 {
         void Draw(Math::TransformationMatrix display_matrix, unsigned int color = 0xFFFFFFFF);
         void Draw(
             Math::TransformationMatrix display_matrix,
-            Math::ivec2 texel_position,
-            Math::ivec2 frame_size,
+            Math::ivec3 texel_position,
+            Math::ivec3 frame_size,
             unsigned int color = 0xFFFFFFFF
         );
-        Math::ivec2 GetSize() const;
+        Math::ivec3 GetSize() const;
         ~Texture();
 
         Texture(const Texture&) = delete;

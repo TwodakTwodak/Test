@@ -117,14 +117,14 @@ void CS230::Sprite::Draw(Math::TransformationMatrix display_matrix) {
     texture->Draw(display_matrix * Math::TranslationMatrix(-GetHotSpot(0)), GetFrameTexel(animations[current_animation]->CurrentFrame()), GetFrameSize());
 }
 
-Math::ivec2 CS230::Sprite::GetHotSpot(int index){
+Math::ivec3 CS230::Sprite::GetHotSpot(int index){
 	if (index < hotspots.size()) {
 		return hotspots[index];
 	}
 	return { 0,0 };
 }
 
-Math::ivec2 CS230::Sprite::GetFrameSize()
+Math::ivec3 CS230::Sprite::GetFrameSize()
 {
     return frame_size;
 }
@@ -147,7 +147,7 @@ bool CS230::Sprite::AnimationEnded()
     return animations[current_animation]->Ended();
 }
 
-Math::ivec2 CS230::Sprite::GetFrameTexel(int index) const
+Math::ivec3 CS230::Sprite::GetFrameTexel(int index) const
 {
     if (index < 0 || index >= frame_texels.size()) {
         Engine::GetLogger().LogError("GetFrameTexel");

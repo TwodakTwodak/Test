@@ -24,9 +24,9 @@ namespace CS230 {
     private:
         void FindCharRects();
         Math::irect& GetCharRect(char c);
-        Math::ivec2  MeasureText(std::string text);
+        Math::ivec3  MeasureText(std::string text);
         void DrawChar(Math::TransformationMatrix& matrix, char c, unsigned int color = 0xFFFFFFFF);
-        unsigned int GetPixel(Math::ivec2 texel);
+        unsigned int GetPixel(Math::ivec3 texel);
         //not exist
 
         Image original_image;

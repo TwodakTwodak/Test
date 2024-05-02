@@ -31,20 +31,20 @@ namespace CS230 {
         void Update(double dt);
         void Load(const std::filesystem::path& sprite_file);
         void Draw(Math::TransformationMatrix display_matrix);
-        Math::ivec2 GetHotSpot(int index);
-        Math::ivec2 GetFrameSize();
+        Math::ivec3 GetHotSpot(int index);
+        Math::ivec3 GetFrameSize();
 
         void PlayAnimation(int animation);
         bool AnimationEnded();
     private:
-        Math::ivec2 GetFrameTexel(int index) const;
+        Math::ivec3 GetFrameTexel(int index) const;
 
         Texture* texture;
-        std::vector<Math::ivec2> hotspots;
+        std::vector<Math::ivec3> hotspots;
 
         int current_animation;
-        Math::ivec2 frame_size;
-        std::vector<Math::ivec2> frame_texels;
+        Math::ivec3 frame_size;
+        std::vector<Math::ivec3> frame_texels;
         std::vector<Animation*> animations;
     };
 }

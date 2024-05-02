@@ -1,4 +1,4 @@
-/*
+ /*
 Copyright (C) 2023 DigiPen Institute of Technology
 Reproduction or distribution of this file or its contents without
 prior written consent is prohibited
@@ -8,76 +8,65 @@ Author:     Jonathan Holmes
 Created:    March 8, 2023
 */
 
-#ifndef VEC2_H
-
-#define VEC2_H
-
+#pragma once
 #include <limits>
 
 namespace Math {
-    struct vec2 {
+    struct vec3 {
         double x{ 0.0 };
         double y{ 0.0 };
+        double z{ 0.0 };
 
-        vec2() = default;
-        vec2(double x, double y) : x(x), y(y) {}
+        vec3() = default;
+        vec3(double x, double y, double z) : x(x), y(y), z(z) {}
 
-        bool operator==(const vec2& v);
-        bool operator!=(const vec2& v);
+        bool operator==(const vec3& v);
+        bool operator!=(const vec3& v);
 
-        vec2 operator+(const vec2& v);
-        vec2& operator+=(const vec2& v);
+        vec3 operator+(const vec3& v);
+        vec3& operator+=(const vec3& v);
 
-        vec2 operator-(const vec2& v);
-        vec2& operator-=(const vec2& v);
+        vec3 operator-(const vec3& v);
+        vec3& operator-=(const vec3& v);
 
-        vec2 operator*(double scale);
-        vec2& operator*=(double scale);
+        vec3 operator*(double scale);
+        vec3& operator*=(double scale);
 
-        vec2 operator/(double divisor);
-        vec2& operator/=(double divisor);
-
-        vec2 operator-();
+        vec3 operator/(double divisor);
+        vec3& operator/=(double divisor);
     };
 
-    vec2 operator*(double scale, const vec2& v);
-    //what is this made for!, maybe for multiplay two different vec2? It won't be? Because it's not efficent and meaningless
-    //I think it's made for non variable vec2!!!!!!! Not sure haha
-    //But it get an adress of vec2
+    vec3 operator*(double scale, const vec3& v);
 
-    struct ivec2 {
+    struct ivec3 {
         int x{ 0 };
         int y{ 0 };
+        int z{ 0 };
 
-        ivec2() = default;
-        ivec2(int x, int y) : x(x), y(y) {};
-        explicit operator vec2() {
-            return vec2{ static_cast<double>(x),static_cast<double>(y) };
+        ivec3() = default;
+        ivec3(int x, int y, int z) : x(x), y(y), z(z) {};
+        explicit operator vec3() {
+            return vec3{ static_cast<double>(x),static_cast<double>(y), static_cast<double>(z) };
         }
 
-        bool operator==(const ivec2& v);
-        bool operator!=(const ivec2& v);
+        bool operator==(const ivec3& v);
+        bool operator!=(const ivec3& v);
 
-        ivec2 operator+(const ivec2& v);
-        ivec2& operator+=(const ivec2& v);
+        ivec3 operator+(const ivec3& v);
+        ivec3& operator+=(const ivec3& v);
 
-        ivec2 operator-(const ivec2& v);
-        ivec2& operator-=(const ivec2& v);
+        ivec3 operator-(const ivec3& v);
+        ivec3& operator-=(const ivec3& v);
 
-        ivec2 operator*(int scale);
-        ivec2& operator*=(int scale);
+        ivec3 operator*(int scale);
+        ivec3& operator*=(int scale);
 
-        ivec2 operator/(int divisor);
-        ivec2& operator/=(int divisor);
+        ivec3 operator/(int divisor);
+        ivec3& operator/=(int divisor);
 
-        vec2 operator*(double scale);
-        vec2 operator/(double divisor);
-        //??????
-
-        ivec2 operator-();
+        vec3 operator*(double scale);
+        vec3 operator/(double divisor);
     };
 
+
 }
-
-
-#endif
