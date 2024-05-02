@@ -29,6 +29,7 @@ void Main_menu::Update([[maybe_unused]] double dt) {
 	}else if(Engine::GetInput().KeyJustReleased(CS230::Input::Keys::Up) && current_button > 0){
 		--current_button;
 	}
+	///dahdiwadhiahwihadiwahidhidwihdw
 
 	if (current_button != before_button) {
 		buttons[before_button] = Engine::GetFont(static_cast<int>(Fonts::Outlined)).PrintToTexture(strings[before_button], ColorToInt({ 134, 179, 0, 255 }));
