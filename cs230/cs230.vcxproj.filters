@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Game">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Game\Mode1">
+      <UniqueIdentifier>{84194efa-f407-4fdf-a51d-993f7b8b83fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\GameState">
+      <UniqueIdentifier>{fddc1eab-41ad-4ea7-97e3-26d3921e9aa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Input">
+      <UniqueIdentifier>{4e883340-e2d6-42b2-acf4-6143b876f248}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Logger">
+      <UniqueIdentifier>{56b3818a-1d58-47f7-b83b-811eb1df8018}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Engine">
+      <UniqueIdentifier>{dff899f4-35c1-4e5b-b4b3-22b5f8cec4c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Camera">
+      <UniqueIdentifier>{2eeefe51-cd49-4be9-94e3-b8a0cea85950}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Math">
+      <UniqueIdentifier>{6338cdce-4b97-46fc-a2cb-370232de008d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Texture">
+      <UniqueIdentifier>{58880263-84a8-49f5-a46a-c233bf36db04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Mode2">
+      <UniqueIdentifier>{6d189ae4-932d-46e2-954a-02e9adc90546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Splash">
+      <UniqueIdentifier>{ee3d6de8-70b5-4bfa-bc69-7aa69e0aad20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\GameObject">
+      <UniqueIdentifier>{046d6d57-9378-415b-be9d-94ed56f72ffb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Mode1\Object">
+      <UniqueIdentifier>{acb93c3e-c62e-436e-8d9b-6b15d493515a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Mode2\Object">
+      <UniqueIdentifier>{fc17bbb5-a024-47ce-9db1-9da46972df2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Mode1\Player">
+      <UniqueIdentifier>{b8688586-fa0c-41bd-ab0c-9d03cb3b650e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Mode2\Player">
+      <UniqueIdentifier>{9f0e77db-7f59-4ad5-931c-62865837297a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Mode1\Other">
+      <UniqueIdentifier>{f3525d09-2fd3-47a6-95f1-6dc1c09c728e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Mode2\Other">
+      <UniqueIdentifier>{403dd359-e8ea-4a41-9418-5fbcfe465f83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Font">
+      <UniqueIdentifier>{dea8a5af-b640-4b0c-b8cb-3da2b37dbbfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Main_menu">
+      <UniqueIdentifier>{8c38ff86-9e9e-45bd-95f3-d3bd475d2e06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Engine\Camera.cpp">
+      <Filter>Engine\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Engine.cpp">
+      <Filter>Engine\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Texture.cpp">
+      <Filter>Engine\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Vec2.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Window.cpp">
+      <Filter>Engine\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\GameStateManager.cpp">
+      <Filter>Engine\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Input.cpp">
+      <Filter>Engine\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Logger.cpp">
+      <Filter>Engine\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Matrix.cpp">
+      <Filter>Engine\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Sprite.cpp">
+      <Filter>Engine\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Splash.cpp">
+      <Filter>Game\Splash</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Animation.cpp">
+      <Filter>Engine\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\GameObject.cpp">
+      <Filter>Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\GameObjectManager.cpp">
+      <Filter>Engine\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Crates.cpp">
+      <Filter>Game\Mode1\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Robot.cpp">
+      <Filter>Game\Mode1\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Asteroid.cpp">
+      <Filter>Game\Mode1\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Cat.cpp">
+      <Filter>Game\Mode1\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Meteor.cpp">
+      <Filter>Game\Mode2\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\TextureManager.cpp">
+      <Filter>Engine\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Ship.cpp">
+      <Filter>Game\Mode2\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Background.cpp">
+      <Filter>Game\Mode1\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Mode1.cpp">
+      <Filter>Game\Mode1\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Mode2.cpp">
+      <Filter>Game\Mode2\Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Font.cpp">
+      <Filter>Engine\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Main_menu.cpp">
+      <Filter>Game\Main_menu</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Engine\Camera.h">
+      <Filter>Engine\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Engine.h">
+      <Filter>Engine\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Texture.h">
+      <Filter>Engine\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Vec2.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Window.h">
+      <Filter>Engine\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameState.h">
+      <Filter>Engine\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameStateManager.h">
+      <Filter>Engine\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Input.h">
+      <Filter>Engine\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Logger.h">
+      <Filter>Engine\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Matrix.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Rect.h">
+      <Filter>Engine\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Sprite.h">
+      <Filter>Engine\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\States.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Splash.h">
+      <Filter>Game\Splash</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Animation.h">
+      <Filter>Engine\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameObject.h">
+      <Filter>Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\GameObjectManager.h">
+      <Filter>Engine\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Crates.h">
+      <Filter>Game\Mode1\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Robot.h">
+      <Filter>Game\Mode1\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Asteroid.h">
+      <Filter>Game\Mode1\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Cat.h">
+      <Filter>Game\Mode1\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Meteor.h">
+      <Filter>Game\Mode2\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\TextureManager.h">
+      <Filter>Engine\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Ship.h">
+      <Filter>Game\Mode2\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Background.h">
+      <Filter>Game\Mode1\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Mode1.h">
+      <Filter>Game\Mode1\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Mode2.h">
+      <Filter>Game\Mode2\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine\Font.h">
+      <Filter>Engine\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Fonts.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Main_menu.h">
+      <Filter>Game\Main_menu</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
